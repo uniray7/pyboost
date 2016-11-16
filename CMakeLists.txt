@@ -23,7 +23,7 @@ find_package( "OpenCV" 3.1 REQUIRED ${PROJ_OCV_DEP_MODULES}
 
 file(GLOB project_sources ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
-PYTHON_ADD_MODULE(${PROJECT_NAME} SHARED ${project_sources} ${CMAKE_CURRENT_SOURCE_DIR}/include/pyboostcvconverter.hpp)
+PYTHON_ADD_MODULE(${PROJECT_NAME} SHARED ${project_sources} ${CMAKE_CURRENT_SOURCE_DIR}/include/pyboostcvconverter.hpp ${CMAKE_CURRENT_SOURCE_DIR}/include/grayscale.hpp)
 
 
 target_include_directories(${PROJECT_NAME} PUBLIC
